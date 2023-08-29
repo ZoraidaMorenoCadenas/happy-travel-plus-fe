@@ -1,0 +1,17 @@
+.container-card{
+    border: solid #D64DD6 0.2px;
+    border-radius: 25px;
+    width: 20vw;
+    margin: 2.5vh 2.5vw;
+}
+/*.container-image{} cuadro para la imagen*/
+.api-image{
+    width: 14vw;
+    max-width: 100%;
+    margin: 4vh 3vw;
+    border-radius: 25px;;
+}
+.text-container{
+font-size: 1em;
+margin: 1em 2em;
+}
