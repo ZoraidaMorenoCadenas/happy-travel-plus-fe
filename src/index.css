@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
 
 :root {
+  --color-azul: #0079FF; 
+  --color-verde: #00DFA2; 
+  --color-fucsia: #FF0060;
+  --color-pastel: #FBFDCE; 
+}
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+ }
+
+:root {
   font-family: Jaldi;
   line-height: 1.5;
   font-weight: 400;
@@ -25,13 +37,7 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+
 
 h1 {
   font-size: 3.2em;
