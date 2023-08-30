@@ -21,24 +21,24 @@ function Detail() {
     }, []);
 
   return (
-    <div>
-        <img src={destination.image} alt={destination.title}/>
+    <div className='detail-container'>
+        <img src={destination.image} alt={destination.title} className='detail-img'/>
 
-        <div>
-            <div>
+        <div className='detail-info'>
+            <div className='detail-info-first-container'>
                 <div>
                     <h2>{destination.title}</h2>
                     <p>{destination.location}</p>
                 </div>
                 
-                <div>
+                <div className='detail-info-btns'>
                     <button><img src={EditIcon} alt='Edit icon'/></button>
 
                     <button><img src={DeleteIcon} alt='Delete icon'/></button>
                 </div>
             </div>
             
-            <p>{destination.description}</p>
+            <p className='detail-description'>{destination.description}</p>
         </div>
     </div>
   );
