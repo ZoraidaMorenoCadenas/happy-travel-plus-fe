@@ -37,6 +37,7 @@ export default Search;
  */
 import React, { useState } from 'react';
 import SearchIcon from '../../assets/Glass-icon.svg';
+import './Search.css';
 
 const Search = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -52,16 +53,15 @@ const Search = ({ onSearch }) => {
 
   return (
     <div className="search-bar">
-      <form onSubmit={handleSearchSubmit}>
+      <form onSubmit={handleSearchSubmit} >
         <input
           type="text"
-          placeholder="Buscar por título o ubicación..."
+          placeholder="Search..."
           value={searchTerm}
           onChange={handleSearchChange}
+          className='input-search'
         />
-        <button type="submit">
-          <img src={SearchIcon} alt="Icono de búsqueda" className='icon' />
-        </button>
+          <img src={SearchIcon} alt="Icono de búsqueda" className='icon-search' />
       </form>
     </div>
   );

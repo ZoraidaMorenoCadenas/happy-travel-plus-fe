@@ -1,0 +1,17 @@
+.icon-search{
+    width: 24px;
+    height: 23px;
+    cursor: pointer;
+}
+.input-search{
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--color-pastel) ;
+    font-family: Jaldi;
+    font-size: 20px;
+    color: var(--color-azul);
+    border-style: none;
+    box-shadow: 0px 4px 4px 0px #00000040 inset;
+
+}
