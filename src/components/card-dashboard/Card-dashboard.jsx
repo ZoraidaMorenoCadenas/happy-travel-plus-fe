@@ -1,9 +1,8 @@
-import { useState, useEffect} from 'react'
-import Card from '../../components/card/Card';
+import { useState, useEffect} from 'react';
+import Card from '../card/Card';
 import { CardService } from '../../services/Cards-Service';
-import CardDashboard from '../../components/card-dashboard/Card-dashboard';
 
-function HomePage() {
+function CardDashboard() {
   const [cards, setCards] = useState([]);
     const cardService = CardService();
     
@@ -11,7 +10,7 @@ function HomePage() {
         cardService.getAll()
            
             .then (function (response){
-                //console.log(response);
+                console.log(response);
                 setCards(response.data);
             })
             .catch(function (error) {
@@ -25,10 +24,8 @@ function HomePage() {
   return (
     <>
 
-<CardDashboard/>
-
-{/*
 <div className="container-cards-grid">
+<h1>HOLA</h1>
          {cards.map((card) => (
             <Card
             key={card.id}
@@ -37,10 +34,11 @@ function HomePage() {
             location = {card.location}
             image= {card.image} />
          ))}
-            {<button onClick={handleAdd}>Agregar</button>}
-         </div>*/}
+            {/*<button onClick={handleAdd}>Agregar</button>*/}
+         </div>
+     
     </>
   )
 }
 
-export default HomePage
+export default CardDashboard
