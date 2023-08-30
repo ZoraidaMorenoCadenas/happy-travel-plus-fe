@@ -2,3 +2,8 @@
     width: 165px;
     height: 78px;
 }
+.divider{
+    border: none;
+  border-top: 2px solid var(--color-azul); /* Estilo de la línea divisoria */
+  margin: 10px 0; /* Espaciado vertical */
+}
