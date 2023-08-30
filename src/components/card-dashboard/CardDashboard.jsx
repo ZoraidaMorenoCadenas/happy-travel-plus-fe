@@ -2,6 +2,8 @@ import { useState, useEffect} from 'react';
 import Card from '../card/Card';
 import { CardService } from '../../services/Cards-Service';
 
+
+
 function CardDashboard() {
   const [cards, setCards] = useState([]);
     const cardService = CardService();
@@ -23,19 +25,16 @@ function CardDashboard() {
 
   return (
     <>
-
-<div className="grid-container">
-
+    
          {cards.map((card) => (
             <Card
             key={card.id}
-            id= {card.id}
+            id= {card.user_id}
             title = {card.title}
             location = {card.location}
             image= {card.image} />
          ))}
-            {/*<button onClick={handleAdd}>Agregar</button>*/}
-         </div>
+        
      
     </>
   )
