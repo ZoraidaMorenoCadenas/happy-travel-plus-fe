@@ -24,8 +24,8 @@ function CardDashboard() {
   return (
     <>
 
-<div className="container-cards-grid">
-<h1>HOLA</h1>
+<div className="grid-container">
+
          {cards.map((card) => (
             <Card
             key={card.id}

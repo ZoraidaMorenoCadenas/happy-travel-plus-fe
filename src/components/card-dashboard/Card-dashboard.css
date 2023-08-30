@@ -1,0 +1,96 @@
+.giant-div{
+    display:flex;
+    flex-direction: row;
+
+}
+
+div.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 90%;
+    margin: 0em auto;
+    justify-content: center; 
+    padding: 2em 0;
+}
+.card-container {
+    display: flex;
+    width: 18.75em;
+    flex-direction: column;
+    font-family: "Jaldi";
+    color: #0079FF;
+    background-color: #FBFDCE;
+    margin: 1.25em 0.938em;
+    border-radius: 1.25em;
+    position: relative;
+   
+}
+
+.container-image {
+    display:flex;
+    width: 18.75em;
+    height: 18.75em;
+    position: relative;
+    border-radius: 1.5em;
+    overflow: hidden;
+  }
+
+.container-ud{
+    display: flex;
+    padding: 1.25em;
+    justify-content: space-between;
+    
+}
+
+.icon-info {
+    display: flex;
+    z-index: 1;
+    width: 100%;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+.info{
+    height: 3rem;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.5em;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 25px;
+} 
+.dashboard-title {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.card-location {
+    font-weight: 400;
+    font-size: 20px;
+}
+.dashboard-location {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icons-ud {
+    display: flex;
+    align-items: center;
+    width: 5em;
+    justify-content: space-between;
+}
+
+.text-container-card{
+    padding: 1.25em;
+}
