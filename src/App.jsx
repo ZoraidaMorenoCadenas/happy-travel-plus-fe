@@ -1,14 +1,15 @@
 import { useState, useEffect} from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
-import HomePage from './pages/homepage/HomePage';
+import Router from './application/Router';
+import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
   return (
     <>
-     <HomePage />
+      <BrowserRouter>
+        <Router/>
+      </BrowserRouter>
     </>
   )
 }

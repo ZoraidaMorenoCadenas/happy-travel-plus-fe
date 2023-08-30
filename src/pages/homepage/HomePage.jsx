@@ -1,6 +1,7 @@
 import { useState, useEffect} from 'react'
 import Card from '../../components/card/Card';
 import { CardService } from '../../services/Cards-Service';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   const [cards, setCards] = useState([]);
@@ -25,13 +26,14 @@ function HomePage() {
     <>
 
 <div className="container-cards-grid">
-         {cards.map((card) => (
+         {cards.map((card, i) => (
+          <Link to={`/detail/${i}`} key={i}>
             <Card
-            key={card.id}
             id= {card.id}
             title = {card.title}
             location = {card.location}
             image= {card.image} />
+          </Link>
          ))}
             {/*<button onClick={handleAdd}>Agregar</button>*/}
          </div>
