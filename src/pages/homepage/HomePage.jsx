@@ -1,26 +1,17 @@
 
 import {React, useState, useEffect} from 'react'
-import Card from '../../components/card/Card';
 import { CardService } from '../../services/Cards-Service';
-//import { fetchCards } from '../../services/Cards-Service';
-import { Link } from 'react-router-dom';
 import "./cards.css";
 
 
-// import editIcon from '../assets/edit-icon.svg';
-// import deleteIcon from '../assets/delete-icon.svg';
-// import infoIcon from '../assets/Info.svg';
 
 export default function HomePage() {
 
   const [destinations, setDestinations] = useState([]);
   {/*const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);*/}
-
   const cardDestinationService = CardService();
-
  
 useEffect(() => {
-    
     // Make sure CardService is properly implemented and returns a promise
     cardDestinationService.getAll()
       .then(function (response) {
