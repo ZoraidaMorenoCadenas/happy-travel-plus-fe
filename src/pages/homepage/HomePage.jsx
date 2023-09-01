@@ -25,7 +25,7 @@ useEffect(() => {
     cardDestinationService.getAll()
       .then(function (response) {
         console.log(response);
-        setDestinations(response.data); // Assuming your API response is an array
+        setDestinations(response.data[0]); // Assuming your API response is an array
       })
       .catch(function (error) {
         console.log(error);
@@ -40,7 +40,7 @@ useEffect(() => {
       
       {destinations.map((destination) => (
     <div key = {destination.id} className="cards" style={{ width: '18.75rem', height: '25rem' }}>
-          <img className="card-img-top" src={`http://127.0.0.1:8000/${destination.image}`} alt="Card" />
+          <img className="card-img-top" src={`http://127.0.0.1:8000/storage/${destination.image}`} alt="Card" />
     <div className='date-cards'>
    <div  className="card-body">
     <h5 className="card-title">Título:{destination.title}</h5>
