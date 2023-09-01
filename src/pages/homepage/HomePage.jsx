@@ -43,10 +43,9 @@ useEffect(() => {
           <img className="card-img-top" src={`http://127.0.0.1:8000/${destination.image}`} alt="Card" />
     <div className='date-cards'>
    <div  className="card-body">
-    <h5 className="card-title">Titulo:{destination.title}</h5>
+    <h5 className="card-title">Título:{destination.title}</h5>
     <p className="card-text">Lugar:{destination.location}</p>
   </div>
-  )
 </div>
 </div>
 
