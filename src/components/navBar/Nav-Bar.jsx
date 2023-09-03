@@ -6,7 +6,7 @@ import avatarIcon from '../../assets/Avatar-icon.svg';
 import createIcon from '../../assets/Create-icon.svg';
 import logoutIcon from '../../assets/Logout-icon.svg';
 import homeIcon from '../../assets/Home-icon.svg';
-import '../navBar/NavBar.css'
+import './NavBar.css'
 import { useAuth } from '../../../context/useAuth';
 
 const NavBar = ({ onLogout }) => {
