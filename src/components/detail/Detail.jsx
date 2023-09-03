@@ -11,14 +11,15 @@ function Detail() {
     const cardService = CardService();
     
     useEffect(() => {
-        cardService.getAll()
+        cardService.getById(1)
             .then (response => {
-                setDestination(response.data[id]);
+                setDestination(response.data);
+                console.log(destination)
             })
             .catch((error) => {
                 console.log(error);
             })
-    }, []);
+    }, [id]);
 
   return (
     <div className='detail-container'>
