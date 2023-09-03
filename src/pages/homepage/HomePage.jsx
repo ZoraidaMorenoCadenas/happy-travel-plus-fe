@@ -16,7 +16,7 @@ useEffect(() => {
     cardDestinationService.getAll()
       .then(function (response) {
         console.log(response);
-        setDestinations(response.data[0]); // Assuming your API response is an array
+        setDestinations(response.data); // Assuming your API response is an array
       })
       .catch(function (error) {
         console.log(error);
