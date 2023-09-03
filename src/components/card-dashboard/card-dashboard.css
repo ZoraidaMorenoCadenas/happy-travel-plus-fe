@@ -5,6 +5,14 @@
     border-radius: 20px;
 }
 
+.dashboard-grid{
+    display: grid;
+    grid-template-columns: 16vw 16vw 16vw 16vw;
+    grid-gap: 8vw;
+    margin:0;
+    padding:0;
+}
+
 .card{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
