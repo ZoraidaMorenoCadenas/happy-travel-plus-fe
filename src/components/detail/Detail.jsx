@@ -14,15 +14,17 @@ function Detail() {
         cardService.getAll()
             .then (response => {
                 setDestination(response.data[id]);
+                console.log(destination)
+                console.log(destination.image)
             })
             .catch((error) => {
                 console.log(error);
             })
-    }, []);
+    }, [id]);
 
   return (
     <div className='detail-container'>
-        <img src={destination.image} alt={destination.title} className='detail-img'/>
+        <img src= {`http://127.0.0.1:8000/storage/${destination.image}`} alt={destination.title} className='detail-img'/>
 
         <div className='detail-info'>
             <div className='detail-info-first-container'>
