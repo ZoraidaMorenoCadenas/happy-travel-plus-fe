@@ -11,9 +11,9 @@ function Detail() {
     const cardService = CardService();
     
     useEffect(() => {
-        cardService.getById(24)
+        cardService.getAll()
             .then (response => {
-                setDestination(response.data);
+                setDestination(response.data[id]);
                 console.log(destination)
                 console.log(destination.image)
             })
@@ -24,7 +24,7 @@ function Detail() {
 
   return (
     <div className='detail-container'>
-        <img src= {destination.image} alt={destination.title} className='detail-img'/>
+        <img src= {`http://127.0.0.1:8000/storage/${destination.image}`} alt={destination.title} className='detail-img'/>
 
         <div className='detail-info'>
             <div className='detail-info-first-container'>

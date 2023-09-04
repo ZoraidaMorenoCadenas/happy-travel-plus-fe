@@ -1,7 +1,7 @@
 import {React, useState, useEffect} from 'react'
 import { CardService } from '../../services/Cards-Service';
 import "./card-dashboard.css";
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function CardDashboard() {
 
@@ -23,31 +23,23 @@ useEffect(() => {
 
 
   return (
-    <div className = "dashboard-grid" > 
-          
-{destinations.map((destination) => (
-  
-    <div key = {destination.id} className="cards" style={{ width: '17.50rem', height: '25rem' }}>
-      <Link to={`/detail/${destination.id}`} />
-          <img className="card-img-top" src={`http://127.0.0.1:8000/storage/${destination.image}`} alt="Card" />
-    <div className='date-cards'>
-   <div  className="card-body">
-    <h5 className="card-title">Título:{destination.title}</h5>
-    <p className="card-text">Lugar:{destination.location}</p>
-    <Link/>
+    <div className="dashboard-grid">   
+      {destinations.map((destination, i) => (
+        <Link to={`./detail/${i}`} key={i}>
+          <div className="cards" style={{ width: '17.50rem', height: '25rem' }}>
+            <img className="card-img-top" src={`http://127.0.0.1:8000/storage/${destination.image}`} alt="Card" />
+            
+            <div className='date-cards'>
+              <div  className="card-body">
+                <h5 className="card-title">Título:{destination.title}</h5>
+                <p className="card-text">Lugar:{destination.location}</p>
+              </div>
+            </div>
+          </div>
+        </Link>
+     ))}
   </div>
-  
-  </div>
-</div>
-
-
-))}
-
-</div>
-
-
-    
-  )
+   )
 }
 
 export default CardDashboard;
