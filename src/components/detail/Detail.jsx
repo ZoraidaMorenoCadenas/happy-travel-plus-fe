@@ -11,10 +11,11 @@ function Detail() {
     const cardService = CardService();
     
     useEffect(() => {
-        cardService.getById(1)
+        cardService.getById(24)
             .then (response => {
                 setDestination(response.data);
                 console.log(destination)
+                console.log(destination.image)
             })
             .catch((error) => {
                 console.log(error);
@@ -23,7 +24,7 @@ function Detail() {
 
   return (
     <div className='detail-container'>
-        <img src={destination.image} alt={destination.title} className='detail-img'/>
+        <img src= {destination.image} alt={destination.title} className='detail-img'/>
 
         <div className='detail-info'>
             <div className='detail-info-first-container'>
