@@ -7,9 +7,9 @@ import DestinationForm from '../components/Destination/Destination.jsx';
 function Router() {
   return (
     <Routes>
-        <Route path="/" element= {<HomePage/>}/> 
-        <Route path="/detail/:id" element={<Detail/>}/>
-        <Route path='/destination/:id' element={<DestinationForm/>}/>
+        <Route path='/' element= {<HomePage/>}/> 
+        <Route path='/detail/:id' element={<Detail/>}/>
+        <Route path='/destination' element={<DestinationForm/>}/>
     </Routes>
   );
 }
