@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import "./FormEdit.css";
 import axios from "axios";
 import { Link, useParams } from 'react-router-dom';
-import folderImg from '../../assets/File-icon.svg';
 
 
 export default function FormEdit() {
