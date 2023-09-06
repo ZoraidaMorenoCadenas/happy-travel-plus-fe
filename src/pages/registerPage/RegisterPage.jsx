@@ -1,15 +1,15 @@
 import {React, useState, useEffect} from 'react'
 //import CardDashboard from "../../components/card-dashboard/Card-dashboard"
-import NavBar from '../../components/navBar/Nav-Bar';
-import FormRegister from '../../components/register/FormRegister';
 
-function DetailPage() {
+import Register from '../../components/register/FormRegister';
+
+export default function RegisterPage() {
 
   return (
 
     <div>
-        <NavBar />
-        <FormRegister />
+      
+        <Register />
 
 
 
