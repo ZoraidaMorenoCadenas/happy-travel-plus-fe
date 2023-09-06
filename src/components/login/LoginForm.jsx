@@ -1,16 +1,16 @@
+import { useState } from 'react';
 import React from 'react'
 //import axios from 'axios';
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
 
 function LoginForm() {
-
-    {/*const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const navigate = useNavigate();
   
-    const handleSubmit = async (e) => {
+    {/*const handleSubmit = async (e) => {
       e.preventDefault();
   
       try {
@@ -39,8 +39,8 @@ function LoginForm() {
         <div className="form-body">
           <h3 className='form-title'>Acceso de Usuario</h3>
           <div className="red-line"></div>
-          {error && <div className="error-message">{error}</div>} {/* Muestra el mensaje de error */}
-          <form onSubmit={handleSubmit}>
+          {/*{error && <div className="error-message">{error}</div>} {/* Muestra el mensaje de error */}
+          <form> {/*onSubmit={handleSubmit} ESto va dentro de la etiqueta form como un atributo*/}
             <div>
               <label className='form-label'>Email:</label>
               <input
