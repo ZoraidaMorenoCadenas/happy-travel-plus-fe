@@ -1,20 +1,18 @@
 import {React, useState, useEffect} from 'react'
 //import CardDashboard from "../../components/card-dashboard/Card-dashboard"
 
-import Detail from '../../components/detail/Detail';
+import Register from '../../components/register/FormRegister';
 
-function DetailPage() {
+export default function RegisterPage() {
 
   return (
 
     <div>
-       
-        <Detail />
+      
+        <Register />
 
 
 
     </div>
   )
 }
-
-export default DetailPage

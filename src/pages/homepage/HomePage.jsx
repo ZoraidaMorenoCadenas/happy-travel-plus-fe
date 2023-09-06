@@ -9,9 +9,18 @@ export default function HomePage() {
 
    <div> 
  
+<<<<<<< HEAD
    
     <CardDashboard />
     
+=======
+ 
+    <CardDashboard />
+  
+    
+      
+      
+>>>>>>> feature/register
 
 </div>
   )
