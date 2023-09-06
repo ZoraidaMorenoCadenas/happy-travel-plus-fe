@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { CardService } from '../../services/Cards-Service';
-
-import './FormRegister.css'
+import './FormRegister.css';
 
 function Register() {
   const [formData, setFormData] = useState({
