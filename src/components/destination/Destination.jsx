@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './Destination.css';
 import FileIcon from '../../assets/File-icon.svg';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function DestinationForm() {
   const [formData, setFormData] = useState({
     title: '',
     location: '',
-    image: null,
+    image: '',
     description: '',
   });
 
@@ -19,6 +20,8 @@ function DestinationForm() {
   });
 
   const handleInputChange = (e) => {
+    e.preventDefault();
+
     const { name, value, type, files } = e.target;
 
     if (type === 'file') {
@@ -68,15 +71,44 @@ function DestinationForm() {
     return valid;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  //const handleSubmit = (e) => {
+  //  e.preventDefault();
 
-    if (validateForm()) {
+  //  if (validateForm()) {
       // Aquí puedes enviar los datos del formulario al servidor
       // Por ejemplo, puedes usar fetch() o Axios para hacer una solicitud POST
       // con los datos de formData al backend.
       // También puedes mostrar una notificación de éxito o redirigir al usuario después de la creación exitosa.
-      console.log('Formulario válido. Enviar datos al servidor:', formData);
+      //console.log('Formulario válido. Enviar datos al servidor:', formData);
+   // }
+  //};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    if (validateForm()) {
+      try {
+        const formDataToSend = new FormData();
+        formDataToSend.append('title', formData.title);
+        formDataToSend.append('location', formData.location);
+        formDataToSend.append('image', formData.image);
+        formDataToSend.append('description', formData.description);
+  
+      const response = await axios.post('http://localhost:8000/api/destinations', formDataToSend, {
+          headers: {
+           // 'Content-Type': 'multipart/form-data', 
+            'Accept' : 'application/json'
+          },
+        });
+  
+        if (response.ok) {
+          console.log('Card de destino creada con éxito');
+          // Redirigir al usuario o mostrar una notificación de éxito
+        } else {
+          console.error('Error al crear la card de destino');
+        }
+      } catch (error) {
+        console.error('Error de red:', error);
+      }
     }
   };
 
@@ -120,7 +152,7 @@ function DestinationForm() {
             <label htmlFor="image" className='cd-form-title'>Imagen</label>
             
             <div className='cd-form-img-subcontainer'>
-              <label className="cd-form-rounded-start-modif" for="image">
+              <label className="cd-form-rounded-start-modif" htmlFor="image">
                 <img src={FileIcon} alt="File Icon"/>
               </label>
               
