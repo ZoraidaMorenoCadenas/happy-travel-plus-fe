@@ -6,7 +6,7 @@ import { Link, useParams } from 'react-router-dom';
 
 export default function FormEdit() {
     const { id } = useParams();
-    const [name, setName] = useState('');
+    const [name, setTitle] = useState('');
     const [location, setLocation ] = useState('');
     const [description, setDescription] = useState('');
     const [image, setImage ] = useState(null);
@@ -18,7 +18,7 @@ export default function FormEdit() {
             try {
                 const response = await axios.get(`http://localhost:8000/api/destinations/${id}`);
                 const details = response.data;
-                setName(details.name);
+                setTitle(details.name);
                 setLocation(details.location);
                 setDescription(details.description);
                 
@@ -49,7 +49,7 @@ export default function FormEdit() {
         e.preventDefault();
         
         const formData = new FormData();
-        formData.append('name', name);
+        formData.append('title', title);
         formData.append('location', location);
         formData.append('description', description);
 
@@ -67,7 +67,7 @@ export default function FormEdit() {
               });
               console.log('Response:', response.data);
               
-              setName('');
+              setTitle('');
               setLocation('');
               setDescription('');
               setImagePreviw(null);
@@ -84,7 +84,7 @@ export default function FormEdit() {
                 <div className="edit-box1">
                   <div className="edit-input-container">
                     <label htmlFor="title">Título</label>
-                    <input id="title" className="edit-form-control" placeholder='Escribe un título' value={name} onChange={(e) => setName(e.target.value)} />
+                    <input id="title" className="edit-form-control" placeholder='Escribe un título' value={name} onChange={(e) => setTitle(e.target.value)} />
                     <p id="error-title" className="error"></p>
                   </div>
                   <div className="edit-label-input-container">
