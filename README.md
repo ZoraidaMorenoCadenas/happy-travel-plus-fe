@@ -78,3 +78,6 @@ Happy Travel is a collaborative project in which we develop an app where travele
 
 - [@Valentina Rios](https://github.com/valblue21)
   [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/valentina-rios-0a9a7a273/)
+
+- [@Milena Halas](https://github.com/LenaHalas)
+  [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/milena-halas-justiniano-292921211/)
