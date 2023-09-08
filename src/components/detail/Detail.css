@@ -1,0 +1,119 @@
+.detail-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.detail-img {
+    background-color: blue;
+    height: 25rem;
+    width: 25rem;
+    border-radius: 1rem;
+}
+
+.detail-info {
+    width: 40%;
+}
+
+.detail-info-first-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.detail-info-first-container div h2 {
+    color: var(--color-fucsia);
+}
+
+.detail-info-first-container div p {
+    color: var(--color-fucsia);
+    text-align: start;
+}
+
+.detail-info-btns {
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-info-btns button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+}
+
+.detail-info-btns img {
+    height: 1.5rem;
+}
+
+.detail-description {
+    height: 20rem;
+    text-align: start;
+}
+
+
+@media screen and (max-width: 768px) {
+    .detail-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detail-info {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .detail-img {
+        width: 100%;
+        height: 19rem;
+        position: relative;
+    }
+
+    .detail-info-first-container {
+        background: fuchsia;
+        height: 5rem;
+        width: 16rem;
+        border-radius: 1rem;
+        position: absolute;
+        top: 20rem;
+        left: 4.3rem;
+        z-index: 1;
+    }
+
+    .detail-info-first-container div h2 {
+        color: var(--color-blanco);
+        /*flex-direction: row;*/
+        text-align: center;
+    }
+    
+    .detail-info-first-container div p {
+        color: var(--color-blanco);
+        text-align: center;
+    }
+
+    .detail-description {
+        height: auto;
+    }
+
+    .detail-info-btns {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        position: relative;
+        top: 12rem;
+    }
+
+    .detail-info-btns button {
+        margin-top: 10px; 
+    }
+}

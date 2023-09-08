@@ -5,12 +5,14 @@
   --color-verde: #00DFA2; 
   --color-fucsia: #FF0060;
   --color-pastel: #FBFDCE; 
+  --color-blanco: #FFFFFF;
 }
-body {
+
+*{
   margin: 0px;
   box-sizing: border-box;
   padding: 0px;
- }
+}
 
 :root {
   font-family: Jaldi;
