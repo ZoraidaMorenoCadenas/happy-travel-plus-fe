@@ -31,8 +31,8 @@ useEffect(() => {
             
             <div className='date-cards'>
               <div  className="card-body">
-                <h5 className="card-title">Título:{destination.title}</h5>
-                <p className="card-text">Lugar:{destination.location}</p>
+                <h5 className="card-title">{destination.title}</h5>
+                <p className="card-text">{destination.location}</p>
               </div>
             </div>
           </div>

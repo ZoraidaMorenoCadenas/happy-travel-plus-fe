@@ -80,9 +80,10 @@ div{
 
 .custom-button-submit {
     margin-top: 20px;
-    display: flex;
-    justify-content: center;
+    /*display: flex;*/
+    justify-content: space-between;
     align-items: center;
+    width:100%;
 }
 
 .submit-button {
@@ -93,6 +94,9 @@ div{
     border: none;
     cursor: pointer;
     font-weight: bold;
+    width: 7.5rem;
+    margin-right: 2px;
+    
 }
 
 .cancel-button {
@@ -104,6 +108,8 @@ div{
     cursor: pointer;
     font-weight: bold;
     text-decoration: none;
+    width: 7.2rem;
+    margin-left: 5px;
 }
 
 .login-link {
@@ -111,7 +117,7 @@ div{
     display: flex;
     align-items: center;
     justify-content: left;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
    font-weight: 700;
 }
 
