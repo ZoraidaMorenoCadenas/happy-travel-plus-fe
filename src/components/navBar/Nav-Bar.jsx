@@ -12,13 +12,13 @@ import { useAuth } from '../../../context/useAuth';
 const NavBar = ({ onLogout }) => {
   const [searchValue, setSearchValue] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [isUserRegistered, setIsUserRegistered] = useState(false);
-  const { user, setUser } = useAuth();
+  {/*const [isUserRegistered, setIsUserRegistered] = useState(false);*/}
+const { user, setUser } = useAuth();
 
   const handleSearch = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`/api/search?search=${searchValue}`);
+      const response = await fetch(`/api/destinations/search/${searchValue}`);
       const data = await response.json();
       setSearchResults(data);
     } catch (error) {

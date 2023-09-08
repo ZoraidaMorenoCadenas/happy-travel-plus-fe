@@ -14,8 +14,8 @@ function Detail() {
         cardService.getAll()
             .then (response => {
                 setDestination(response.data[id]);
-                console.log(destination)
-                console.log(destination.image)
+                console.log(destination.data[id])
+                console.log(destination.data[id].image)
             })
             .catch((error) => {
                 console.log(error);
