@@ -13,7 +13,6 @@ useEffect(() => {
     // Make sure CardService is properly implemented and returns a promise
     cardDestinationService.getAll()
       .then(function (response) {
-        console.log(response);
         setDestinations(response.data); // Assuming your API response is an array
       })
       .catch(function (error) {
@@ -25,7 +24,7 @@ useEffect(() => {
   return (
     <div className="dashboard-grid">   
       {destinations.map((destination, i) => (
-        <Link to={`./detail/${i}`} key={i}>
+        <Link to={`./detail/${destination.id}`} key={i}>
           <div className="cards" style={{ width: '17.50rem', height: '25rem' }}>
             <img className="card-img-top" src={`http://127.0.0.1:8000/storage/${destination.image}`} alt="Card" />
             

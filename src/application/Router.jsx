@@ -12,13 +12,12 @@ import Edit from '../pages/editPage/EditPage.jsx';
 function Router() {
   return (
     <Routes>
-        <Route path='/' element= {<HomePage/>}/> 
+        <Route path='/' element={<HomePage/>}/> 
         <Route path='/detail/:id' element={<Detail/>}/>
         <Route path='/destination' element={<DestinationForm/>}/>
         <Route path='/login' element={<Login/>}/>
-        <Route path="/" element= {<HomePage/>}/> 
-        <Route path="/register" element= {<RegisterPage/>}/>
-        <Route path="/:id/edit" element= {<Edit/>}/>
+        <Route path="/register" element={<RegisterPage/>}/>
+        <Route path="/:id/edit" element={<Edit/>}/>
     </Routes>
   );
 }
