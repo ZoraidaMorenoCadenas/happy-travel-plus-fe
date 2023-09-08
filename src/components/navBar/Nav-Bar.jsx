@@ -13,13 +13,13 @@ import { useAuth } from '../../../context/useAuth';
 const NavBar = ({ onLogout }) => {
   const [searchValue, setSearchValue] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [isUserRegistered, setIsUserRegistered] = useState(false);
-  const { user, setUser } = useAuth();
+  {/*const [isUserRegistered, setIsUserRegistered] = useState(false);*/}
+const { user, setUser } = useAuth();
 
   const handleSearch = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`/api/search?search=${searchValue}`);
+      const response = await fetch(`/api/destinations/search/${searchValue}`);
       const data = await response.json();
       setSearchResults(data);
     } catch (error) {
@@ -32,8 +32,11 @@ const NavBar = ({ onLogout }) => {
     <nav>
       <div className="navbar-content">
         <div className="logo-container">
+        <Link to="/" className="logo-link">
           <img src={logoImage} alt="imagen del Logo" />
+          </Link>
         </div>
+        <div className= "div-right-content">
         <div className="search-input-container">
           <form onSubmit={handleSearch}>
             <div className="form-control-container">
@@ -67,6 +70,7 @@ const NavBar = ({ onLogout }) => {
           <Link to="/register" className="nav-link">
             <img className="icon-nav" src={avatarIcon} alt="icono perfil" />
           </Link>
+        </div>
         </div>
       </div>
     </nav>
