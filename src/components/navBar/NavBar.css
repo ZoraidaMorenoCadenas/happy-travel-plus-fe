@@ -2,12 +2,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    /*padding: 15px;*/
+}
+
+
+.logo-container{
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-start;
+
 }
 
 .logo-container img {
     width: 165px;
     height: 78px;
+}
+
+.div-right-content{
+    margin-left: ;
+    display: flex;
+    justify-content: flex-end;
+    width: 40vw;
+
 }
 
 .search-input-container {
@@ -20,7 +36,7 @@
 
 .navbar-icons {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 .form-control {

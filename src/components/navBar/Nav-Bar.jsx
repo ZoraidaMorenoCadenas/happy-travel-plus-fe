@@ -33,6 +33,7 @@ const NavBar = ({ onLogout }) => {
         <div className="logo-container">
           <img src={logoImage} alt="imagen del Logo" />
         </div>
+        <div className= "div-right-content">
         <div className="search-input-container">
           <form onSubmit={handleSearch}>
             <div className="form-control-container">
@@ -63,6 +64,7 @@ const NavBar = ({ onLogout }) => {
           <Link to="/register" className="nav-link">
             <img className="icon-nav" src={avatarIcon} alt="icono perfil" />
           </Link>
+        </div>
         </div>
       </div>
     </nav>
