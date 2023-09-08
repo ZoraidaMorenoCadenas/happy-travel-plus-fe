@@ -31,7 +31,9 @@ const NavBar = ({ onLogout }) => {
     <nav>
       <div className="navbar-content">
         <div className="logo-container">
+        <Link to="/" className="logo-link">
           <img src={logoImage} alt="imagen del Logo" />
+          </Link>
         </div>
         <div className= "div-right-content">
         <div className="search-input-container">
