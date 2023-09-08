@@ -6,6 +6,7 @@ import avatarIcon from '../../assets/Avatar-icon.svg';
 import createIcon from '../../assets/Create-icon.svg';
 import logoutIcon from '../../assets/Logout-icon.svg';
 import homeIcon from '../../assets/Home-icon.svg';
+import addIcon from '../../assets/Create-icon.svg';
 import './NavBar.css'
 import { useAuth } from '../../../context/useAuth';
 
@@ -58,6 +59,9 @@ const NavBar = ({ onLogout }) => {
         <div className="navbar-icons">
           <Link to="/" className="nav-link">
             <img className="icon-nav" src={homeIcon} alt="icono home" />
+          </Link>
+          <Link to="/destination" className="nav-link">
+            <img className="icon-nav" src={addIcon} alt="icono crear" />
           </Link>
 
           <Link to="/register" className="nav-link">
